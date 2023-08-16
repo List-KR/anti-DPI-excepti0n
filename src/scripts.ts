@@ -16,8 +16,8 @@ function GenerateExceptionRule() {
   document.querySelector('code').innerText = Rule
 }
 
-document.querySelectorAll('#options input').forEach(function(elmeent) {
-  elmeent.addEventListener('change', function() { 
+document.querySelectorAll('#options input').forEach(function(element) {
+  element.addEventListener('change', function() { 
     if (getComputedStyle(document.querySelector('textarea#others')).getPropertyValue('border-color') !== 'rgb(255, 0, 0)') GenerateExceptionRule()
   })
 })
