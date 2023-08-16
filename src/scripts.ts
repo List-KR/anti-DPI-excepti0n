@@ -23,7 +23,8 @@ document.querySelectorAll('#options input').forEach(function(element) {
 })
 
 document.querySelector('textarea#others').addEventListener('input', function() {
-  if (/([a-z0-9-\.]+\.[a-z0-9]+\n?)+/.test((document.querySelector('textarea#others') as HTMLTextAreaElement).value)) {
+  let Value = (document.querySelector('textarea#others') as HTMLTextAreaElement).value
+  if (Value.split('\n').every(function (Line) { return /([a-z0-9-\.]+\.[a-z0-9]+\n?)+/.test(Line) }) || Value === '') {
     (document.querySelector('textarea#others') as HTMLTextAreaElement).style.removeProperty('border-color')
     GenerateExceptionRule()
   } else {
