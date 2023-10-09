@@ -12,7 +12,7 @@ function GenerateExceptionRule() {
   })
   Domains = Domains.concat((document.querySelector('#options textarea#others') as HTMLTextAreaElement).value.split('\n'))
   if (Domains[Domains.length - 1] === '') Domains.pop()
-  let Rule = !Domains.length ? '@@*$stealth=dpi' : `@@*$stealth=dpi,domains=~${Domains.join(',~')}`
+  let Rule = !Domains.length ? '@@*$stealth=dpi' : `@@*$stealth=dpi,domain=~${Domains.join(',~')}`
   document.querySelector('code').innerText = Rule
 }
 
