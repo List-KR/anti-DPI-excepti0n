@@ -11,6 +11,10 @@
         이 웹 페이지의 소스 코드는 <a href='https://github.com/List-KR/anti-DPI-excepti0n'>여기</a>에서 확인하실 수 있습니다.
         또한, List-KR 커뮤니티 문서로 정리된 AdGuard 관련 도움말은 <a href='https://community.list-kr.com/'>여기</a>에서 확인하실 수 있습니다.
       </h3>
+      <h3>
+        안내 사항: 생성된 예외 규칙을 적용에 관계 없이 DPI 우회 기능을 끄시면, AdGuard가 DPI를 우회할 수 없습니다.
+        그리고, KT 통신사에 대한 DPI 우회 업데이트는 <a href='https://github.com/AdguardTeam/CoreLibs/issues/1789#issuecomment-1752399863'>여기</a>를 참고해주세요.
+      </h3>
       <code-container>
         <code>@@*$stealth=dpi,domain=~womenonweb.org</code>
       </code-container>
@@ -33,7 +37,7 @@
         <label for='xvideos'>xvideos.com</label>
       </checkbox-container>
       <textarea id='others' autocapitalize='off' autocorrect='off' autocomplete='off' spellcheck='false'
-      rows='10' cols='40' placeholder='DPI 우회 기능에 적용될 다른 웹 사이트들의 도메인을 입력해주세요. 도메인 간의 구분은 엔터로 합니다.'></textarea>0
+      rows='10' cols='40' placeholder='예외 처리가 되지 않을 다른 웹 사이트들의 도메인을 입력해주세요. 도메인 간의 구분은 엔터로 합니다.'></textarea>0
     </div>
   </body>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css'/>
